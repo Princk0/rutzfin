@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\rwany\\\\OneDrive\\\\Documents\\\\Projects\\\\rutzfin\\\\backend-java\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\rwany\\\\OneDrive\\\\Documents\\\\Projects\\\\rutzfin\\\\backend-java\" | ForEach-Object { $_.FullName })"
+    ]
+  }
+}

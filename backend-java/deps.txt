@@ -1,0 +1,6 @@
+
+The following files have been resolved:
+   org.springframework.boot:spring-boot-starter-web:jar:3.3.5:compile[36m -- module spring.boot.starter.web[0;1m [auto][m
+   org.springframework.boot:spring-boot-starter-jdbc:jar:3.3.5:compile[36m -- module spring.boot.starter.jdbc[0;1m [auto][m
+   org.postgresql:postgresql:jar:42.7.4:compile[36m -- module org.postgresql.jdbc[0;1m [auto][m
+
