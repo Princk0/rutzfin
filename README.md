@@ -1,15 +1,36 @@
 # Rutzfin
 
-Rutzfin is a full-stack banking and financial operations dashboard that combines a Java Spring Boot backend, a React frontend, and PostgreSQL data models for analytics, customer activity, fraud monitoring, lending health, and branch performance.
+Rutzfin is a full-stack financial operations dashboard that brings together core banking and analytics workflows into a single, modern application. The project combines a Java Spring Boot backend, a React frontend, and a PostgreSQL data layer to support branch performance monitoring, fraud detection signals, customer insights, and lending health analysis.
 
-## Overview
+## Why this project
 
-This project includes:
+This project was built to model a practical financial operations platform where business stakeholders can monitor performance, identify risk indicators, and understand portfolio health through a clear dashboard experience.
 
-- A Java backend for REST APIs and business logic
-- A Vite + React frontend for operational dashboards and views
-- PostgreSQL schema, seed data, indexes, views, stored procedures, and triggers
-- SQL scripts for banking and analytics workloads
+It focuses on:
+
+- Operational visibility across branches and departments
+- Customer and transaction monitoring
+- Risk and fraud signal tracking
+- Loan and portfolio health insights
+- Data-driven analytics for business decisions
+
+## Architecture
+
+Rutzfin follows a layered architecture:
+
+- Frontend: React + Vite for dashboard pages and interactive data views
+- Backend: Java + Spring Boot for REST APIs and service logic
+- Database: PostgreSQL with schema, seed data, views, procedures, and analytics queries
+- Data flow: UI requests trigger backend API calls, which read from structured SQL views and reporting logic
+
+## Features
+
+- Executive dashboard with KPI summaries
+- Branch performance analytics
+- Customer overview and account detail views
+- Fraud alert monitoring
+- Loan health and risk visibility
+- SQL-driven analytics and reporting layer
 
 ## Tech stack
 
@@ -19,83 +40,58 @@ This project includes:
 - React
 - Vite
 - PostgreSQL
+- REST APIs and dashboard-focused frontend design
 
-## Repository structure
+## Project structure
 
 ```text
 .
-├── backend/                  # Python backend (if used in local/dev workflows)
+├── backend/                  # Python-based backend workflow
 ├── backend-java/             # Spring Boot application
-│   ├── src/main/java/        # Java source files
-│   ├── src/main/resources/  # configuration and app properties
+│   ├── src/main/java/        # Java source code
+│   ├── src/main/resources/  # application configuration
 │   ├── src/test/java/        # unit tests
-│   ├── pom.xml              # Maven build configuration
+│   ├── pom.xml              # Maven configuration
 │   └── RASPBERRY_PI_SETUP.md
 ├── frontend/                 # React frontend
-├── sql/                      # SQL scripts for PostgreSQL setup
+├── sql/                      # PostgreSQL schema and SQL scripts
 ├── .gitignore
 ├── README.md
-└── package-lock.json
+├── package-lock.json
+└── LICENSE                   # add a license if desired
 ```
 
-## Prerequisites
+## Getting started
 
-Before running the app, install:
+### Prerequisites
 
 - Java 25
 - Maven 3.9+
 - Node.js 18+
 - PostgreSQL 14+
 
-## Backend setup
+### Backend
 
-1. Open the Java backend folder:
+Navigate to the Java backend and run the application:
 
 ```bash
 cd backend-java
-```
-
-2. Ensure the database environment variables are available. Example:
-
-```bash
-export PG_HOST=localhost
-export PG_PORT=5432
-export PG_DATABASE=rutzfin
-export PG_USER=rutzfin_user
-export PG_PASSWORD=your_password
-```
-
-3. Run the app:
-
-```bash
 mvn spring-boot:run
 ```
 
-The application will start from the Spring Boot entry point in the Java project.
+### Frontend
 
-## Frontend setup
-
-1. Open the frontend folder:
+Install dependencies and start the application:
 
 ```bash
 cd frontend
-```
-
-2. Install dependencies:
-
-```bash
 npm install
-```
-
-3. Start the development server:
-
-```bash
 npm run dev
 ```
 
-## Database setup
+### Database
 
-Import the SQL scripts in order from the `sql/` directory:
+Set up the PostgreSQL database using the SQL scripts in the `sql/` folder. For a standard local setup, run the scripts in order:
 
 1. `01_schema.sql`
 2. `02_seed_data.sql`
@@ -105,23 +101,29 @@ Import the SQL scripts in order from the `sql/` directory:
 6. `06_triggers.sql`
 7. `07_advanced_queries.sql`
 
-If you are using the PostgreSQL variant, use the scripts from `sql/postgresql/` as needed.
+## Testing
 
-## Running tests
-
-Java backend:
+Run the backend test suite:
 
 ```bash
 cd backend-java
 mvn test
 ```
 
-## Notes
+## Portfolio positioning
 
-- The project is intended for local development and demonstration of financial operations analytics.
-- Update environment variables and database credentials for your deployment environment.
-- Keep secrets outside of the repository and use secure deployment configuration for production systems.
+This project demonstrates:
+
+- Full-stack application design
+- Java backend development with Spring Boot
+- Frontend dashboard development with React
+- Database design and SQL analytics work
+- Problem-solving for financial operations and risk visibility
 
 ## License
 
-This project is provided for educational and internal use unless a separate license is added by the repository owner.
+This project is currently provided as a portfolio project and may be updated with a formal open-source license if needed.
+
+## Contact
+
+For questions or collaboration opportunities, feel free to connect via GitHub or LinkedIn.
