@@ -4,6 +4,12 @@
 .env.local
 .env.*.local
 
+# ── Local tooling and AI metadata ─────────────────────────────────────────────
+.claude/
+.github/modernize/
+.vscode/
+.venv/
+
 # ── Python backend ───────────────────────────────────────────────────────────
 backend/.venv/
 __pycache__/
@@ -29,6 +35,5 @@ frontend/dist/
 # ── IDE / OS ──────────────────────────────────────────────────────────────────
 .idea/
 *.iml
-.vscode/
 .DS_Store
 Thumbs.db
